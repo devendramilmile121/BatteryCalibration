@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Battery Calibration</string>
+    <string name="app_desc">The Android operating system has a feature called Battery Stats, which keeps track of battery capacity, when it is full or empty. The problem is that it sometimes becomes corrupted and starts displaying data that isn’t real, which, for example, causes the phone to turn off before it reaches 0 percent. Calibrating your Android battery simply means getting the Android OS to correct this information so it is reflective of your actual battery levels once again.</string>
+    <string name="notiText">Battery is 100% charged !</string>
+</resources>

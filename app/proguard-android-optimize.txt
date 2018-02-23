@@ -1,0 +1,42 @@
+-dontpreverify
+-repackageclasses ''
+-allowaccessmodification
+-optimizations !code/simplification/arithmetic
+-keepattributes *Annotation*
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+
+-keep public class * extends android.view.View {
+    public <init>(android.content.Context);
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public void set*(...);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    static android.os.Parcelable$Creator CREATOR;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+# Add *one* of the following rules to your Proguard configuration file.
+# Alternatively, you can annotate classes and class members with @android.support.annotation.Keep
+
+# keep everything in this package from being removed or renamed
+-keep class android.support.v7.** { *; }
+
+# keep everything in this package from being renamed only
+-keepnames class android.support.v7.** { *; }
